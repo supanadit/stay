@@ -18,7 +18,7 @@ downloading package
 Make sure your $GOPATH/bin include to Environment such as `.bash_profile`
 
 ### Method 2
-1. Download release of this Project
+1. Download [release](https://github.com/supanadit/gostay/releases) of this Project
 2. Copy `gostay` to `/usr/bin` or `$GOPATH/bin`
 
 ## How it Works

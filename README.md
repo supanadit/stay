@@ -1,4 +1,4 @@
-# GO STAY
+# _GOSTAY_
 
 This is an alternative of `go get`, the story why i build this software because `go get` not showing specific progress while
 downloading package

@@ -29,11 +29,23 @@ gostay -u <your_package>
 ```
 ![Go Stay Example](https://i.ibb.co/tHRqBNS/gostay.png)
 
+Now you can installing package more than one, or make it like `requirements.txt`
+```shell script
+gostay -f requirements.txt
+```
+
 ## Feature
 - Download Golang package [OK]
+- Install and Download Package like Python using `pip install -r requirements.txt` [OK]
 
 ## TODO
 - Create web interface for golang package manager Web GUI
+
+## Changelog
+### Version 1.1
+- Can automatically installing and download using `requirement.txt` with flag `-f` it similar like `requirement.txt` in Python 
+### Version 1.0
+- Can download package with flag `-u`
 
 ## Thanks To
 

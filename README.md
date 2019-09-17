@@ -7,7 +7,7 @@ downloading package
 
 - Windows ( NO )
 - Linux ( YES )
-- Mac OS ( It should be work too, Not Tested )
+- Mac OS ( YES, Not Tested )
 
 ## Install
 ### Method 1 ( Still using `go get` )

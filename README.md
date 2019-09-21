@@ -5,9 +5,9 @@ downloading package
 
 ## Compatibility
 
-- Windows ( NO )
-- Linux ( YES )
-- Mac OS ( It should be work too, Not Tested )
+- Windows
+- Linux
+- Mac OS
 
 ## Install
 ### Method 1 ( Still using `go get` )

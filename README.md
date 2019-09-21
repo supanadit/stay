@@ -42,6 +42,8 @@ gostay -f requirements.txt
 - Create web interface for golang package manager Web GUI
 
 ## Changelog
+### Version 1.2
+- Support All Operating System
 ### Version 1.1
 - Can automatically installing and download using `requirement.txt` with flag `-f` it similar like `requirement.txt` in Python 
 ### Version 1.0

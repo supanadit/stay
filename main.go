@@ -16,8 +16,8 @@ import (
 
 func main() {
 	parser := argparse.NewParser("gostay", "Gostay is `go get` alternative, and a package manager for Golang")
-	file := parser.String("f", "file", &argparse.Options{Required: false, Help: "File target like `requirement.txt`", Default: ""})
-	s := parser.String("u", "url", &argparse.Options{Required: false, Help: "URL for package", Default: ""})
+	file := parser.String("f", "file", &argparse.Options{Required: false, Help: "File target like `requirement.txt`"})
+	s := parser.String("u", "url", &argparse.Options{Required: false, Help: "URL for package"})
 	err := parser.Parse(os.Args)
 	if err != nil {
 		fmt.Print(parser.Usage(err))

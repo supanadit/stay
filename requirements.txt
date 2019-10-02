@@ -1,0 +1,12 @@
+github.com/akamensky/argparse
+github.com/xanzy/ssh-agent
+github.com/mitchellh/go-homedir
+github.com/kevinburke/ssh_config
+github.com/jbenet/go-context
+github.com/emirpasic/gods
+github.com/src-d/gcfg
+github.com/sergi/go-diff
+github.com/jbenet/go-context
+gopkg.in/warnings.v0
+gopkg.in/src-d/go-git.v4
+gopkg.in/src-d/go-billy.v4

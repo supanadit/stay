@@ -42,6 +42,8 @@ gostay -f requirements.txt
 ## TODO
 - Create web interface for golang package manager Web GUI
 - Support downloading package from golang.org
+- Automatically Check Needed Dependency
+- Integration with builtin Golang package manager such as `go get -u -v`
 
 ## Changelog
 ### Version 1.2

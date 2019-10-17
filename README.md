@@ -12,7 +12,7 @@ downloading package
 
 ## Install
 ### Method 1 ( Still using `go get` )
-1. Using go get -v - u github.com/supanadit/gostay
+1. Using `go get -u -v github.com/supanadit/gostay`
 2. Go to $GOPATH/src/github.com/supanadit/gostay
 3. `go install`
 

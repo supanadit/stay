@@ -4,6 +4,36 @@
 This is an alternative of `go get`, the story why i build this software because `go get` not showing specific progress while
 downloading package
 
+## How it works
+
+![Go Stay Example](https://i.ibb.co/tHRqBNS/gostay.png)
+
+- Installing and download one package
+```shell script
+gostay -u github.com/gin-gonic/gin
+```
+
+- Installing and download the package also find related package to it. flag `-a` meaning `auto`
+```shell script
+gostay -a github.com/gin-gonic/gin
+```
+
+or
+
+```shell script
+gostay --get-related github.com/gin-gonic/gin
+```
+
+- Installing package more than one, with `requirements.txt`
+```shell script
+gostay -f requirements.txt
+```
+
+- Uninstall or Remove package
+```shell script
+gostay -r github.com/supanadit/devops-factory
+```
+
 ## Compatibility
 
 - Windows
@@ -22,30 +52,24 @@ Make sure your $GOPATH/bin include to Environment such as `.bash_profile`
 1. Download [release](https://github.com/supanadit/gostay/releases) of this Project
 2. Copy `gostay` to `/usr/bin` or `$GOPATH/bin`
 
-## How it Works
-
-After you installing this app, just use command
-```shell script
-gostay -u <your_package>
-```
-![Go Stay Example](https://i.ibb.co/tHRqBNS/gostay.png)
-
-Now you can installing package more than one, or make it like `requirements.txt`
-```shell script
-gostay -f requirements.txt
-```
-
 ## Feature
 - Download Golang package [OK]
 - Install and Download Package like Python using `pip install -r requirements.txt` [OK]
+- Get Package and find related package by `gostay -a github.com/gin-gonic/gin` or `gostay --get-related github.com/gin-gonic/gin` [OK]
+- Remove Package or Uninstall Package by `gostay -r github.com/supanadit/devops-factory` [OK]
 
 ## TODO
 - Create web interface for golang package manager Web GUI
 - Support downloading package from golang.org
 - Automatically Check Needed Dependency
-- Integration with builtin Golang package manager such as `go get -u -v`
+- Update Package
+- Show all installed package
+- Support downloading private package use SSH Auth
 
 ## Changelog
+### Version 1.3
+- Legacy Support and could find related package
+- Remove Package or Uninstall Package
 ### Version 1.2
 - Support All Operating System
 ### Version 1.1

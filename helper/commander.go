@@ -20,6 +20,11 @@ type GoEnvironment struct {
 	value string
 }
 
+type GoHome struct {
+	name  string
+	value string
+}
+
 type Package struct {
 	name     string
 	host     string
@@ -27,7 +32,7 @@ type Package struct {
 	fullPath string
 }
 
-var sourceName string = "src"
+var sourceName = "src"
 
 func (Commander) GetEnvironment() []GoEnvironment {
 	command := "env"
@@ -97,28 +102,53 @@ func (Commander) GoPathSourcePackage() []Package {
 	return listPackage
 }
 
-func (Commander) Get(packageName string) {
+func (Commander) Get(packageName string, legacy bool) {
+	environment := GoEnvironment{}
+	if legacy {
+		cmd := exec.Command("go", "get", "-u", "-v", packageName)
+		cmd.Stdout = os.Stdout
+		cmd.Stderr = os.Stderr
+		_ = cmd.Run()
+	} else {
+		sourceGoPath := environment.GoPath().value + "/" + sourceName
+		location := sourceGoPath + "/" + packageName
+		temporaryDirectoryPath := sourceGoPath
+		for _, directory := range strings.Split(packageName, "/") {
+			temporaryDirectoryPath = temporaryDirectoryPath + "/" + directory
+			stat, err := os.Stat(temporaryDirectoryPath)
+			if !(err == nil && stat.IsDir()) {
+				_ = os.MkdirAll(temporaryDirectoryPath, os.ModePerm)
+			}
+		}
+		fullURL := "https://" + packageName
+		_, err := git.PlainClone(location, false, &git.CloneOptions{
+			URL:      fullURL,
+			Progress: os.Stdout,
+		})
+		if err != nil {
+			if err.Error() == "repository already exists" {
+				fmt.Println("Already Downloaded")
+			} else {
+				fmt.Println(err)
+			}
+		}
+	}
+}
+
+func (Commander) Delete(packageName string) {
 	environment := GoEnvironment{}
 	sourceGoPath := environment.GoPath().value + "/" + sourceName
-	location := sourceGoPath + "/" + packageName
 	temporaryDirectoryPath := sourceGoPath
 	for _, directory := range strings.Split(packageName, "/") {
 		temporaryDirectoryPath = temporaryDirectoryPath + "/" + directory
-		stat, err := os.Stat(temporaryDirectoryPath)
-		if !(err == nil && stat.IsDir()) {
-			_ = os.MkdirAll(temporaryDirectoryPath, os.ModePerm)
-		}
 	}
-	fullURL := "https://" + packageName
-	_, err := git.PlainClone(location, false, &git.CloneOptions{
-		URL:      fullURL,
-		Progress: os.Stdout,
-	})
-	if err != nil {
-		if err.Error() == "repository already exists" {
-			fmt.Println("Already Downloaded")
+	stat, err := os.Stat(temporaryDirectoryPath)
+	if err == nil && stat.IsDir() {
+		err = os.RemoveAll(temporaryDirectoryPath)
+		if err == nil {
+			fmt.Println("Package " + packageName + " have been uninstalled")
 		} else {
-			fmt.Println(err)
+			fmt.Println("Cannot Uninstall " + packageName)
 		}
 	}
 }

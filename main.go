@@ -1,7 +1,7 @@
 /*
 	Original Author : Supan Adit Pratama
 	Email : email@supanadit.com
-	Current Version: 1.0
+	Current Version: 1.3
 */
 package main
 
@@ -17,14 +17,27 @@ import (
 func main() {
 	parser := argparse.NewParser("gostay", "Gostay is `go get` alternative, and a package manager for Golang")
 	file := parser.String("f", "file", &argparse.Options{Required: false, Help: "File target like `requirement.txt`"})
-	s := parser.String("u", "url", &argparse.Options{Required: false, Help: "URL for package"})
+	u := parser.String("u", "url", &argparse.Options{Required: false, Help: "URL for package"})
+	a := parser.String("a", "get-related", &argparse.Options{Required: false, Help: "Get Package and find related package"})
+	r := parser.String("r", "remove", &argparse.Options{Required: false, Help: "Remove installed package"})
+
 	err := parser.Parse(os.Args)
 	if err != nil {
 		fmt.Print(parser.Usage(err))
 	}
-	if *s != "" {
+	if *u != "" {
 		data := helper.Commander{}
-		data.Get(*s)
+		data.Get(*u, false)
+	}
+
+	if *a != "" {
+		data := helper.Commander{}
+		data.Get(*a, true)
+	}
+
+	if *r != "" {
+		data := helper.Commander{}
+		data.Delete(*r)
 	}
 
 	// For Automatically Process
@@ -32,7 +45,7 @@ func main() {
 		file, err := os.Open(*file)
 
 		if err != nil {
-			log.Fatalf("Failed opening file: %s", err)
+			log.Fatalf("Failed opening file: %u", err)
 		}
 
 		scanner := bufio.NewScanner(file)
@@ -43,16 +56,16 @@ func main() {
 			txtlines = append(txtlines, scanner.Text())
 		}
 
-		file.Close()
+		_ = file.Close()
 
 		for _, eachline := range txtlines {
 			data := helper.Commander{}
-			fmt.Printf("%s ", eachline)
-			data.Get(eachline)
+			fmt.Printf("%u ", eachline)
+			data.Get(eachline, false)
 		}
 	}
 
-	if *s == "" && *file == "" {
+	if *u == "" && *file == "" && *a == "" && *r == "" {
 		fmt.Print(parser.Usage(err))
 	}
 }

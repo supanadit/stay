@@ -76,9 +76,8 @@ Make sure your $GOPATH/bin include to Environment such as `.bash_profile`
 
 ## Thanks To
 
-[https://github.com/akamensky/argparse](https://github.com/akamensky/argparse)
-
-[https://gopkg.in/src-d/go-git.v4](https://gopkg.in/src-d/go-git.v4)
+- [https://github.com/akamensky/argparse](https://github.com/akamensky/argparse)
+- [https://gopkg.in/src-d/go-git.v4](https://gopkg.in/src-d/go-git.v4)
 
 ## License
 

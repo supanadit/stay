@@ -34,7 +34,7 @@ gostay -r github.com/supanadit/devops-factory
 
 ## Compatibility
 
-- Windows
+- Windows ( Coming soon )
 - Linux
 - Mac OS
 

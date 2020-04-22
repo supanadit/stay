@@ -62,17 +62,6 @@ Make sure your $GOPATH/bin include to Environment such as `.bash_profile`
 - Support downloading private package use SSH Auth
 - Go Modules Support
 
-## Changelog
-### Version 1.3
-- Legacy Support and could find related package
-- Remove Package or Uninstall Package
-### Version 1.2
-- Support All Operating System
-### Version 1.1
-- Can automatically installing and download using `requirement.txt` with flag `-f` it similar like `requirement.txt` in Python 
-### Version 1.0
-- Can download package with flag `-u`
-
 ## Thanks To
 
 - [https://github.com/akamensky/argparse](https://github.com/akamensky/argparse)

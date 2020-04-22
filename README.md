@@ -1,5 +1,5 @@
 # STAY
-Future proof universal package manager fo `Go`.
+Bulletproof package manager fo `Go`.
 
 ## How it works
 

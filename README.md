@@ -1,35 +1,33 @@
-# _GOSTAY_
+# _STAY_
 This is an alternative of `go get`, the story why i build this software because `go get` not showing specific progress while
 downloading package
 
 ## How it works
 
-![Go Stay Example](https://i.ibb.co/tHRqBNS/gostay.png)
-
 - Installing and download one package
 ```shell script
-gostay -u github.com/gin-gonic/gin
+stay -u github.com/gin-gonic/gin
 ```
 
 - Installing and download the package also find related package to it. flag `-a` meaning `auto`
 ```shell script
-gostay -a github.com/gin-gonic/gin
+stay -a github.com/gin-gonic/gin
 ```
 
 or
 
 ```shell script
-gostay --get-related github.com/gin-gonic/gin
+stay --get-related github.com/gin-gonic/gin
 ```
 
 - Installing package more than one, with `requirements.txt`
 ```shell script
-gostay -f requirements.txt
+stay -f requirements.txt
 ```
 
 - Uninstall or Remove package
 ```shell script
-gostay -r github.com/supanadit/devops-factory
+stay -r github.com/supanadit/devops-factory
 ```
 
 ## Compatibility
@@ -40,21 +38,21 @@ gostay -r github.com/supanadit/devops-factory
 
 ## Install
 ### Method 1 ( Still using `go get` )
-1. Using `go get -u -v github.com/supanadit/gostay`
-2. Go to $GOPATH/src/github.com/supanadit/gostay
+1. Using `go get -u -v github.com/supanadit/stay`
+2. Go to $GOPATH/src/github.com/supanadit/stay
 3. `go install`
 
 Make sure your $GOPATH/bin include to Environment such as `.bash_profile`
 
 ### Method 2
-1. Download [release](https://github.com/supanadit/gostay/releases) of this Project
-2. Copy `gostay` to `/usr/bin` or `$GOPATH/bin`
+1. Download [release](https://github.com/supanadit/stay/releases) of this Project
+2. Copy `stay` to `/usr/bin` or `$GOPATH/bin`
 
 ## Feature
 - Download Golang package
 - Install and Download Package like Python using `pip install -r requirements.txt`
-- Get Package and find related package by `gostay -a github.com/gin-gonic/gin` or `gostay --get-related github.com/gin-gonic/gin`
-- Remove Package or Uninstall Package by `gostay -r github.com/supanadit/devops-factory`
+- Get Package and find related package by `stay -a github.com/gin-gonic/gin` or `stay --get-related github.com/gin-gonic/gin`
+- Remove Package or Uninstall Package by `stay -r github.com/supanadit/devops-factory`
 
 ## TODO
 - Create web interface for golang package manager Web GUI

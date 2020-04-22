@@ -51,10 +51,10 @@ Make sure your $GOPATH/bin include to Environment such as `.bash_profile`
 2. Copy `gostay` to `/usr/bin` or `$GOPATH/bin`
 
 ## Feature
-- Download Golang package [OK]
-- Install and Download Package like Python using `pip install -r requirements.txt` [OK]
-- Get Package and find related package by `gostay -a github.com/gin-gonic/gin` or `gostay --get-related github.com/gin-gonic/gin` [OK]
-- Remove Package or Uninstall Package by `gostay -r github.com/supanadit/devops-factory` [OK]
+- Download Golang package
+- Install and Download Package like Python using `pip install -r requirements.txt`
+- Get Package and find related package by `gostay -a github.com/gin-gonic/gin` or `gostay --get-related github.com/gin-gonic/gin`
+- Remove Package or Uninstall Package by `gostay -r github.com/supanadit/devops-factory`
 
 ## TODO
 - Create web interface for golang package manager Web GUI
@@ -63,6 +63,7 @@ Make sure your $GOPATH/bin include to Environment such as `.bash_profile`
 - Update Package
 - Show all installed package
 - Support downloading private package use SSH Auth
+- Go Modules Support
 
 ## Changelog
 ### Version 1.3

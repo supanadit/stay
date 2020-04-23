@@ -49,7 +49,7 @@ Make sure your $GOPATH/bin include to Environment such as `.bash_profile`
 
 ## Feature
 - Download Golang package
-- Install and Download Package like Python using `pip install -r requirements.txt`
+- Install and Download Package like Python by `stay -f requirements.txt`
 - Get Package and find related package by `stay -a github.com/gin-gonic/gin` or `stay --get-related github.com/gin-gonic/gin`
 - Remove Package or Uninstall Package by `stay -r github.com/supanadit/devops-factory`
 

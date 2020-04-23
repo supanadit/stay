@@ -9,7 +9,7 @@ import (
 	"bufio"
 	"fmt"
 	"github.com/akamensky/argparse"
-	"github.com/supanadit/gostay/helper"
+	"github.com/supanadit/stay/helper"
 	"log"
 	"os"
 )

@@ -15,7 +15,7 @@ import (
 )
 
 func main() {
-	parser := argparse.NewParser("gostay", "Gostay is `go get` alternative, and a package manager for Golang")
+	parser := argparse.NewParser("stay", "Bulletproof package manager")
 	file := parser.String("f", "file", &argparse.Options{Required: false, Help: "File target like `requirement.txt`"})
 	u := parser.String("u", "url", &argparse.Options{Required: false, Help: "URL for package"})
 	a := parser.String("a", "get-related", &argparse.Options{Required: false, Help: "Get Package and find related package"})

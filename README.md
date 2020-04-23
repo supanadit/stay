@@ -5,12 +5,12 @@ Bulletproof package manager fo `Go`.
 
 - Installing and download one package
 ```shell script
-stay -u github.com/gin-gonic/gin
+stay -i github.com/gin-gonic/gin
 ```
 
 - Installing and download the package also find related package to it. flag `-a` meaning `auto`
 ```shell script
-stay -a github.com/gin-gonic/gin
+stay -g github.com/gin-gonic/gin
 ```
 
 or

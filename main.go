@@ -17,8 +17,8 @@ import (
 func main() {
 	parser := argparse.NewParser("stay", "Bulletproof package manager")
 	file := parser.String("f", "file", &argparse.Options{Required: false, Help: "File target like `requirement.txt`"})
-	u := parser.String("u", "url", &argparse.Options{Required: false, Help: "URL for package"})
-	a := parser.String("a", "get-related", &argparse.Options{Required: false, Help: "Get Package and find related package"})
+	u := parser.String("i", "install", &argparse.Options{Required: false, Help: "Install Package by URL"})
+	a := parser.String("g", "get-related", &argparse.Options{Required: false, Help: "Get Package and find related package"})
 	r := parser.String("r", "remove", &argparse.Options{Required: false, Help: "Remove installed package"})
 
 	err := parser.Parse(os.Args)

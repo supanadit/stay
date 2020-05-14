@@ -1,5 +1,5 @@
 # STAY
-Bulletproof package manager fo `Go`.
+Bulletproof package manager for Go.
 
 ## How it works
 

@@ -20,7 +20,7 @@ stay -i github.com/gin-gonic/gin
 2. Go to $GOPATH/src/github.com/supanadit/stay
 3. `go install`
 
-Make sure your $GOPATH/bin include to Environment such as `.bash_profile`, `.profile`, or `.bashrc`
+Make sure your $GOPATH/bin added into environment variable such as `.bash_profile`, `.profile`, or `.bashrc`
 
 ### Method 2
 1. Download [release](https://github.com/supanadit/stay/releases) of this Project

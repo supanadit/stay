@@ -1,4 +1,7 @@
 # Stay
+
+[![Go Report Card](https://goreportcard.com/badge/github.com/supanadit/stay)](https://goreportcard.com/report/github.com/supanadit/stay)
+
 Bulletproof package manager for Go.
 
 ## How it works

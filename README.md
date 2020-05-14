@@ -1,4 +1,4 @@
-# STAY
+# Stay
 Bulletproof package manager for Go.
 
 ## How it works
@@ -23,7 +23,7 @@ stay -i github.com/gin-gonic/gin
 Make sure your $GOPATH/bin added into environment variable such as `.bash_profile`, `.profile`, or `.bashrc`
 
 ### Method 2
-1. Download [release](https://github.com/supanadit/stay/releases) of this Project
+1. Download the [release](https://github.com/supanadit/stay/releases) version
 2. Copy `stay` to `/usr/bin` or `$GOPATH/bin`
 
 ## Thanks To
